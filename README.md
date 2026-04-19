@@ -8,7 +8,7 @@
 
 A suite of 6 Claude Code skills that catch security problems before they reach production.
 
-**Author:** Ernesto Moltó Quiles ([@emoltoquiles](https://github.com/emoltoquiles))  
+**Author:** Ernesto Moltó Quiles ([@ernestomq](https://github.com/ernestomq))  
 **License:** [MIT](LICENSE)  
 **Version:** 1.0.0 — April 2026
 
