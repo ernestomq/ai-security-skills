@@ -3,14 +3,14 @@
 ![version](https://img.shields.io/badge/version-1.0.0-blue)
 ![license](https://img.shields.io/badge/license-MIT-green)
 ![claude](https://img.shields.io/badge/Claude%20Code-compatible-orange)
-![skills](https://img.shields.io/badge/skills-6-purple)
+![skills](https://img.shields.io/badge/skills-7-purple)
 ![platform](https://img.shields.io/badge/platform-Windows%20%7C%20macOS%20%7C%20Linux-lightgrey)
 
-A suite of 6 Claude Code skills that catch security problems before they reach production.
+A suite of 7 Claude Code skills that catch security problems before they reach production.
 
 **Author:** Ernesto Moltó Quiles ([@ernestomq](https://github.com/ernestomq))  
 **License:** [MIT](LICENSE)  
-**Version:** 1.0.0 — April 2026
+**Version:** 2.0.0 — April 2026
 
 ---
 
@@ -82,7 +82,19 @@ or DEPLOY. The only command you need to remember before going to production.
 "run all security checks before I deploy"
 "predeploy check"
 ```
+### [skill-auditor](skills/skill-auditor/SKILL.md)
 
+Audits any Claude Code skill or GitHub repository before you install it. Given a URL,
+fetches all relevant files and evaluates how malicious the skill is across 7 threat
+categories — prompt injection, data exfiltration, destructive behaviour, excessive
+permissions, behavioural anomalies, supply chain risk, and semantic plausibility —
+returning a score from 0 to 10 and a clear verdict.
+
+```
+"audit this skill before I install it: [URL]"
+"is this repo safe to use?"
+"run a full security audit on https://github.com/user/repo"
+```
 ---
 
 ## Example output
