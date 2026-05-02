@@ -27,7 +27,7 @@ These skills run before any of that happens.
 
 ## Skills
 
-### 🔍 [secret-detector](skills/secret-detector/SKILL.md)
+### [secret-detector](skills/secret-detector/SKILL.md)
 Fast, read-only scan. Finds secrets without touching anything. Use this first to see
 what's there before deciding what to do.
 
@@ -36,7 +36,7 @@ what's there before deciding what to do.
 "quick security check before I review the code"
 ```
 
-### 🔒 [hardcode-sentinel](skills/hardcode-sentinel/SKILL.md)
+### [hardcode-sentinel](skills/hardcode-sentinel/SKILL.md)
 Full audit + automatic fix. Finds hardcoded values, extracts them to
 `.security/hardcoded-values.env`, rewrites source files to use env references,
 and resists prompt injection attempts in scanned content.
@@ -46,7 +46,7 @@ and resists prompt injection attempts in scanned content.
 "fix all hardcoded secrets in my hooks"
 ```
 
-### 🚨 [leak-preventer](skills/leak-preventer/SKILL.md)
+### [leak-preventer](skills/leak-preventer/SKILL.md)
 Pre-commit and pre-push gate. Simulates real-world exposure and blocks the operation
 if secrets would be pushed. Checks staged files and git history.
 
@@ -55,7 +55,7 @@ if secrets would be pushed. Checks staged files and git history.
 "run pre-commit security check"
 ```
 
-### 🧪 [env-validator](skills/env-validator/SKILL.md)
+### [env-validator](skills/env-validator/SKILL.md)
 Validates environment variables. Detects missing required vars, insecure defaults,
 wrong formats, unused declarations, and env loading order problems.
 
@@ -64,7 +64,7 @@ wrong formats, unused declarations, and env loading order problems.
 "why is my env not loading correctly?"
 ```
 
-### 🧹 [config-linter](skills/config-linter/SKILL.md)
+### [config-linter](skills/config-linter/SKILL.md)
 Security linter for config files. Covers JSON, YAML, docker-compose, GitHub Actions,
 Claude Code settings.json, and more. Catches `privileged: true`, unpinned actions,
 overly permissive CORS, and other misconfigurations.
@@ -74,7 +74,7 @@ overly permissive CORS, and other misconfigurations.
 "check my GitHub Actions workflow"
 ```
 
-### 🛡️ [predeploy-guard](skills/predeploy-guard/SKILL.md)
+### [predeploy-guard](skills/predeploy-guard/SKILL.md)
 Orchestrates all skills above and produces a single deploy decision: BLOCK, WARN,
 or DEPLOY. The only command you need to remember before going to production.
 
@@ -111,14 +111,14 @@ REQUIRED BEFORE DEPLOYING:
 
 **secret-detector** on a clean project:
 ```
-🕵️ SECRET DETECTION REPORT
+ SECRET DETECTION REPORT
 ============================
 Mode: READ-ONLY
 Files scanned: 34
 Git history checked: 50 commits
 Secrets found: 0
 
-✅ No secrets detected. Safe to proceed.
+No secrets detected. Safe to proceed.
 ```
 
 ---
