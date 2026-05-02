@@ -148,7 +148,7 @@ Copy any skill into your `.claude/skills/` directory:
 ```powershell
 # Windows — install all skills globally
 $skillsDir = "$env:USERPROFILE\.claude\skills"
-git clone https://github.com/emoltoquiles/ai-security-skills
+git clone https://github.com/ernestomq/ai-security-skills
 foreach ($skill in Get-ChildItem ai-security-skills/skills -Directory) {
     New-Item -ItemType Directory -Force "$skillsDir\$($skill.Name)"
     Copy-Item "$($skill.FullName)\SKILL.md" "$skillsDir\$($skill.Name)\"
@@ -157,7 +157,7 @@ foreach ($skill in Get-ChildItem ai-security-skills/skills -Directory) {
 
 ```bash
 # macOS / Linux — install all skills globally
-git clone https://github.com/emoltoquiles/ai-security-skills
+git clone https://github.com/ernestomq/ai-security-skills
 for skill in ai-security-skills/skills/*/; do
     name=$(basename "$skill")
     mkdir -p ~/.claude/skills/"$name"
@@ -197,7 +197,7 @@ See [examples/sample.env](examples/sample.env) for the exact format.
 
 ## Pairs well with
 
-- [claude-mcp-sentinel](https://github.com/emoltoquiles/claude-mcp-sentinel) — audits installed skills and MCP servers
+- [claude-mcp-sentinel](https://github.com/ernestomq/claude-mcp-sentinel) — audits installed skills and MCP servers
 - [caveman](https://github.com/JuliusBrussee/caveman) — compresses CLAUDE.md to save tokens
 - [andrej-karpathy-skills](https://github.com/forrestchang/andrej-karpathy-skills) — improves Claude Code reasoning
 
